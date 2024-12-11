@@ -12,13 +12,12 @@ $stmt->bindParam(':id', $id);
 $stmt->execute();
 $aula = $stmt->fetch();
 
-```
+
 if (!$aula) {
     header('Location: exibir_aulas.php');
     exit;
 }
 
-```
 
 } else {
 header('Location: exibir_aulas.php');
@@ -33,7 +32,7 @@ $quantidade_maxima = $_POST['quantidade_maxima'];
 $hora_inicio = $_POST['hora_inicio'];
 $hora_fim = $_POST['hora_fim'];
 
-```
+
 // Valida os dados
 if (empty($nome_aula)) {
     $erro = "O nome da aula não pode estar vazio.";
@@ -69,7 +68,7 @@ if (empty($nome_aula)) {
     }
 }
 
-```
+
 
 }
 ?>

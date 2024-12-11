@@ -5,7 +5,7 @@ require 'config.php'; // Arquivo de configuração para conexão com o banco de 
 if (isset($_GET['id'])) {
 $aula_id = intval($_GET['id']);
 
-```
+
 // Consulta para obter os detalhes da aula
 $sql_aula = "SELECT * FROM aulas WHERE id = :id";
 $stmt_aula = $pdo->prepare($sql_aula);
@@ -35,7 +35,7 @@ $stmt_alunos_aula->bindParam(':aula_id', $aula_id);
 $stmt_alunos_aula->execute();
 $alunos_aula = $stmt_alunos_aula->fetchAll(PDO::FETCH_ASSOC);
 
-```
+
 
 } else {
 echo "ID da aula não fornecido.";
@@ -54,7 +54,7 @@ exit;
 <div class="container mt-5">
 <h2>Detalhes da Aula: <?php echo htmlspecialchars($aula['nome_aula']); ?></h2>
 
-```
+
     <div class="mb-3">
         <h4>Professor</h4>
         <p>Nome: <?php echo htmlspecialchars($professor['nome']); ?></p>
@@ -78,7 +78,6 @@ exit;
     <a href="listar.php" class="btn btn-primary">Voltar à lista</a>
 </div>
 
-```
 
 </body>
 </html>

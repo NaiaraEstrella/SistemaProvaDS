@@ -12,13 +12,12 @@ $stmt->bindParam(':id', $id);
 $stmt->execute();
 $professor = $stmt->fetch();
 
-```
+
 if (!$professor) {
     header('Location: exibir_professores.php');
     exit;
 }
 
-```
 
 } else {
 header('Location: exibir_professores.php');
@@ -33,7 +32,7 @@ $telefone = trim($_POST['telefone']);
 $email = trim($_POST['email']);
 $sexo = $_POST['sexo'];
 
-```
+
 // Valida os dados
 if (empty($nome)) {
     $erro = "O nome não pode estar vazio.";
@@ -63,7 +62,7 @@ if (empty($nome)) {
     }
 }
 
-```
+
 
 }
 ?>
@@ -79,7 +78,7 @@ if (empty($nome)) {
 <div class="container mt-5">
 <h2>Editar Cadastro de Professor</h2>
 
-```
+
     <?php if ($erro): ?>
         <div class="alert alert-danger"><?php echo $erro; ?></div>
     <?php endif; ?>
@@ -112,7 +111,7 @@ if (empty($nome)) {
     </form>
 </div>
 
-```
+
 
 </body>
 </html>
