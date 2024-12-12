@@ -14,13 +14,13 @@ $professor = $stmt->fetch();
 
 
 if (!$professor) {
-    header('Location: exibir_professores.php');
+    header('Location: listar_professor.php');
     exit;
 }
 
 
 } else {
-header('Location: exibir_professores.php');
+header('Location: listar_professor.php');
 exit;
 }
 
@@ -55,7 +55,7 @@ if (empty($nome)) {
 
     // Executa a consulta
     if ($stmt->execute()) {
-        header('Location: exibir_professores.php');
+        header('Location: listar_professor.php');
         exit;
     } else {
         $erro = "Erro ao atualizar o cadastro do professor.";

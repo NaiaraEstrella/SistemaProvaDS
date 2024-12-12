@@ -2,10 +2,11 @@
 require 'config.php';
 
 $erro = ''; // Inicializa a variável de erro
-$sucesso = ''; // Inicializa a variável de sucesso
 
+// Verifica se o parâmetro 'id' foi passado pela URL
 if (isset($_GET['id'])) {
-    $id = intval($_GET['id']);
+    $id = intval($_GET['id']);  // Converte o parâmetro id para um número inteiro
+    // Consulta o aluno pelo id
     $sql = "SELECT * FROM alunos WHERE id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $id);
@@ -13,14 +14,17 @@ if (isset($_GET['id'])) {
     $aluno = $stmt->fetch();
 
     if (!$aluno) {
-        header('Location: exibir.php');
+        // Se não encontrar o aluno, redireciona para a página de listagem
+        header('Location: listar_alunos.php');
         exit;
     }
 } else {
-    header('Location: exibir.php');
+    // Se não passar o id, redireciona para a página de listagem
+    header('Location: listar_alunos.php');
     exit;
 }
 
+// Processa o formulário de edição
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Coleta os dados do formulário
     $nome = trim($_POST['nome']);
@@ -53,7 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Executa a consulta
         if ($stmt->execute()) {
-            header('Location: exibir_alunos.php');
+            // Se a atualização for bem-sucedida, redireciona de volta para a página de listagem
+            header('Location: listar_alunos.php');
             exit;
         } else {
             $erro = "Erro ao atualizar o cadastro do aluno: " . implode(", ", $stmt->errorInfo());
@@ -105,5 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit" class="btn btn-primary">Salvar Alterações</button>
     </form>
 </div>
+    <div class="text-center mt-3">
+        <a href="listar_alunos.php" class="btn btn-primary btn-lg m-2">Voltar para Lista de Alunos</a>
+    </div>
 </body>
 </html>

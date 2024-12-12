@@ -5,99 +5,33 @@ require 'config.php';
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página Inicial - Sistema de Gestão</title>
-<!-- Link do Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<style>
-/* Estilo para o menu lateral */
-.sidenav {
-height: 100%;
-width: 250px;
-position: fixed;
-top: 0;
-left: 0;
-background-color: #111;
-padding-top: 20px;
-}
-.sidenav a {
-padding: 10px 15px;
-text-decoration: none;
-font-size: 18px;
-color: white;
-display: block;
-}
-.sidenav a:hover {
-background-color: #575757;
-}
-.sidenav .sub-menu {
-padding-left: 20px;
-}
-.main-content {
-margin-left: 270px; /* Espaço para o menu lateral */
-padding: 20px;
-}
-.logo-img {
-width: 100%;
-height: auto;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Sistema de Gestão</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de que o caminho para o CSS está correto -->
+    <!-- Link do Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-```
-<!-- Menu Lateral -->
-<div class="sidenav">
-    <h2 class="text-white text-center">Menu</h2>
-
-    <!-- Listar -->
-    <div>
-        <a href="#">Listar</a>
-        <div class="sub-menu">
-            <a href="listar_alunos.php">Lista de Alunos</a>
-            <a href="listar_professores.php">Lista de Professores</a>
-            <a href="listar_aulas.php">Lista de Aulas</a>
-            <a href="listar_informacoes_relacionadas.php">Listar Informações Relacionadas</a>
-        </div>
-    </div>
-
-    <!-- Cadastrar -->
-    <div>
-        <a href="#">Cadastrar</a>
-        <div class="sub-menu">
-            <a href="cadastro_aluno.php">Cadastro de Alunos</a>
-            <a href="cadastro_professor.php">Cadastro de Professores</a>
-            <a href="cadastro_aula.php">Cadastro de Aulas</a>
-        </div>
-    </div>
-
-    <!-- Editar -->
-    <div>
-        <a href="#">Editar</a>
-        <div class="sub-menu">
-            <a href="editar_aluno.php">Edição de Alunos</a>
-            <a href="editar_professor.php">Edição de Professores</a>
-            <a href="editar_aula.php">Edição de Aulas</a>
-        </div>
-    </div>
-
-    <!-- Excluir -->
-    <div>
-        <a href="#">Excluir</a>
-        <div class="sub-menu">
-            <a href="excluir_aluno.php">Exclusão de Alunos</a>
-            <a href="excluir_professor.php">Exclusão de Professores</a>
-            <a href="excluir_aula.php">Exclusão de Aulas</a>
-        </div>
-    </div>
-</div>
-
 <!-- Conteúdo Principal -->
 <div class="main-content">
-    <h1 class="text-center">Bem-vindo ao Sistema de Gestão</h1>
+    <!-- Nome da Academia -->
+    <h1 class="text-center" id="academia-name">Bem vindo ao sistema de Gestão</h1>
+    <!-- Comentário: Substitua "Nome da Academia Aqui" pelo nome da sua academia -->
 
-    <!-- Informações principais ou conteúdo -->
+    <!-- Frase Motivadora -->
+    <p class="text-center" id="motivational-quote">"Sua jornada para a saúde começa aqui!"</p>
+    <!-- Comentário: Substitua "Sua jornada para a saúde começa aqui!" por uma frase motivadora -->
+
+    <!-- Foto da Academia -->
+    <div class="text-center">
+        <img src="caminho/para/sua/foto.jpg" alt="Foto da Academia" class="logo-img">
+        <!-- Comentário: Substitua "caminho/para/sua/foto.jpg" pelo caminho correto da foto da academia -->
+    </div>
+
+    <!-- Botões de Ação -->
     <div class="text-center mt-4">
         <a href="cadastro.php" class="btn btn-primary btn-lg m-2">Efetuar Cadastro</a>
         <a href="editar.php" class="btn btn-warning btn-lg m-2">Editar Cadastro</a>
@@ -106,12 +40,57 @@ height: auto;
     </div>
 </div>
 
-<!-- Link do Bootstrap JS e dependências -->
-<script src="<https://code.jquery.com/jquery-3.5.1.slim.min.js>"></script>
-<script src="<https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js>"></script>
-<script src="<https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js>"></script>
+<!-- Menu -->
+<div class="menu">
+    <h2>Menu</h2>
 
-```
+    <!-- Listar -->
+    <div>
+        <button class="btn btn-secondary" data-toggle="collapse" data-target="#listarMenu">Listar</button>
+        <div id="listarMenu" class="collapse">
+            <a href="listar_alunos.php" class="btn btn-light">Lista de Alunos</a>
+            <a href="listar_professor.php" class="btn btn-light">Lista de Professores</a>
+            <a href="listar_aula.php" class="btn btn-light">Lista de Aulas</a>
+            <a href="exibir_detalhado.php" class="btn btn-light">Listar Informações Relacionadas</a>
+        </div>
+    </div>
+
+    <!-- Cadastrar -->
+    <div>
+        <button class="btn btn-secondary" data-toggle="collapse" data-target="#cadastrarMenu">Cadastrar</button>
+        <div id="cadastrarMenu" class="collapse">
+            <a href="cadastro_alunos.php" class="btn btn-light">Cadastro de Alunos</a>
+            <a href="cadastro_professor.php" class="btn btn-light">Cadastro de Professores</a>
+            <a href="cadastro_aulas.php" class="btn btn-light">Cadastro de Aulas</a>
+        </div>
+    </div>
+
+    <!-- Editar -->
+    <div>
+        <button class="btn btn-secondary" data-toggle="collapse" data-target="#editarMenu">Editar</button>
+        <div id="editarMenu" class="collapse">
+            <a href="editar_aluno.php" class="btn btn-light">Edição de Alunos</a>
+            <a href="editar_professor.php" class="btn btn-light">Edição de Professores</a>
+            <a href="editar_aula.php" class="btn btn-light">Edição de Aulas</a>
+        </div>
+    </div>
+
+    <!-- Excluir -->
+    <div>
+        <button class="btn btn-secondary" data-toggle="collapse" data-target="#excluirMenu">Excluir</button>
+        <div id="excluirMenu" class="collapse">
+            <a href="excluir_aluno.php" class="btn btn-light">Exclusão de Alunos</a>
+            <a href="excluir_professor.php" class="btn btn-light">Exclusão de Professores</a>
+            <a href="excluir_aula.php" class="btn btn-light">Exclusão de Aulas</a>
+        </div>
+    </div>
+</div>
+
+<!-- Link do Bootstrap JS e dependências -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
+

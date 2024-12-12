@@ -84,7 +84,9 @@ $erro = ''; // Mensagem de erro
     </script>
 </div>
 
-
+<div class="text-center mt-3">
+        <a href="index2.php" class="btn btn-primary btn-lg m-2">Voltar ao menu</a>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,57 @@
+/* Estilo para o menu */
+.menu {
+    background-color: #f8f9fa; /* Cor de fundo do menu */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(11, 116, 46, 0.2); /* Sombra para dar profundidade */
+    margin-top: 20px; /* Espaçamento acima do menu */
+    max-width: 400px; /* Tamanho máximo da largura do menu */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo do título do menu */
+.menu h2 {
+    text-align: center; /* Centraliza o título do menu */
+}
+
+/* Estilo dos botões no menu */
+.menu .btn {
+    width: 100%; /* Faz com que os botões ocupem toda a largura do menu */
+    margin: 5px 0; /* Espaçamento entre os botões */
+}
+
+/* Centralizando o conteúdo principal */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilo para a imagem da academia */
+.logo-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Tamanho máximo da imagem */
+    margin-top: 20px;
+}
+
+/* Estilo do nome da academia */
+#academia-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estilo da frase motivadora */
+#motivational-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Estilo para os botões de ação */
+.btn {
+    width: 100%;
+    margin: 10px 0;
+}

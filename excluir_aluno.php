@@ -39,7 +39,7 @@ $erro = ''; // Mensagem de erro
 <h2>Excluir Aluno(s)</h2>
 
 
-<?php if (isset($erro) && $erro): ?>
+    <?php if (isset($erro) && $erro): ?>
         <div class="alert alert-danger"><?php echo $erro; ?></div>
     <?php endif; ?>
 
@@ -84,6 +84,9 @@ $erro = ''; // Mensagem de erro
     </script>
 </div>
 
+<div class="text-center mt-3">
+        <a href="index2.php" class="btn btn-primary btn-lg m-2">Voltar ao menu</a>
+    </div>
 
 
 </body>
