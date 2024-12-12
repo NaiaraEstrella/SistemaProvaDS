@@ -28,8 +28,9 @@ $professores = $stmt->fetchAll();
                 <th>Nome</th>
                 <th>Especialidade</th>
                 <th>Telefone</th>
-                <th>E-mail</th>
+                
                 <th>Sexo</th>
+                <th>Ações</th>
                 
             </tr>
         </thead>
@@ -40,7 +41,6 @@ $professores = $stmt->fetchAll();
                     <td><?php echo htmlspecialchars($professor['nome']); ?></td>
                     <td><?php echo htmlspecialchars($professor['especialidade']); ?></td>
                     <td><?php echo htmlspecialchars($professor['telefone']); ?></td>
-                    <td><?php echo htmlspecialchars($professor['email']); ?></td>
                     <td><?php echo htmlspecialchars($professor['sexo']); ?></td>
                     <td>
                         <!-- Link para editar o professor com o id como parâmetro na URL -->

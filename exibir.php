@@ -41,8 +41,8 @@ $aulas = $stmt_aulas->fetchAll(PDO::FETCH_ASSOC);
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Data de Nascimento</th>
-                    <th>E-mail</th>
                     <th>Ações</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -52,7 +52,7 @@ $aulas = $stmt_aulas->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo $aluno['id']; ?></td>
                             <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
                             <td><?php echo htmlspecialchars($aluno['data_nascimento']); ?></td>
-                            <td><?php echo htmlspecialchars($aluno['email']); ?></td>
+                            
                             <td>
                                 <a href="editar_aluno.php?id=<?php echo $aluno['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
                                 <a href="excluir_aluno.php?id=<?php echo $aluno['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Você tem certeza que deseja excluir este aluno?');">Excluir</a>
@@ -77,7 +77,7 @@ $aulas = $stmt_aulas->fetchAll(PDO::FETCH_ASSOC);
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Especialidade</th>
-                    <th>E-mail</th>
+                    
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -88,7 +88,7 @@ $aulas = $stmt_aulas->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo $professor['id']; ?></td>
                             <td><?php echo htmlspecialchars($professor['nome']); ?></td>
                             <td><?php echo htmlspecialchars($professor['especialidade']); ?></td>
-                            <td><?php echo htmlspecialchars($professor['email']); ?></td>
+                            
                             <td>
                                 <a href="editar_professor.php?id=<?php echo $professor['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
                                 <a href="excluir_professor.php?id=<?php echo $professor['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Você tem certeza que deseja excluir este professor?');">Excluir</a>

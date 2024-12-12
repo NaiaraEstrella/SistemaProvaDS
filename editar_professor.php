@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $nome = trim($_POST['nome']);
 $especialidade = trim($_POST['especialidade']);
 $telefone = trim($_POST['telefone']);
-$email = trim($_POST['email']);
 $sexo = $_POST['sexo'];
 
 
@@ -49,7 +48,6 @@ if (empty($nome)) {
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':especialidade', $especialidade);
     $stmt->bindParam(':telefone', $telefone);
-    $stmt->bindParam(':email', $email);
     $stmt->bindParam(':sexo', $sexo);
     $stmt->bindParam(':id', $id);
 
@@ -96,17 +94,12 @@ if (empty($nome)) {
             <label for="telefone" class="form-label">Telefone</label>
             <input type="tel" class="form-control" id="telefone" name="telefone" value="<?php echo htmlspecialchars($professor['telefone']); ?>" required>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($professor['email']); ?>" required>
-        </div>
-        <div class="mb-3">
-            <label for="sexo" class="form-label">Sexo</label>
+         <label for="sexo" class="form-label">Sexo</label>
             <select class="form-select" id="sexo" name="sexo" required>
                 <option value="Masculino" <?php echo ($professor['sexo'] == 'Masculino') ? 'selected' : ''; ?>>Masculino</option>
                 <option value="Feminino" <?php echo ($professor['sexo'] == 'Feminino') ? 'selected' : ''; ?>>Feminino</option>
             </select>
-        </div>
+        </div class="text-center mt-3">
         <button type="submit" class="btn btn-primary">Salvar Alterações</button>
     </form>
 </div>
@@ -118,3 +111,4 @@ if (empty($nome)) {
 
 </body>
 </html>
+

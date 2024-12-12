@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </div>
     <div class="text-center mt-3">
-        <a href="listar_aulas.php" class="btn btn-primary btn-lg m-2">Voltar para Lista de Aulas</a>
+        <a href="listar_aula.php" class="btn btn-primary btn-lg m-2">Voltar para Lista de Aulas</a>
     </div>
 
 </body>

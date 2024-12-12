@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = trim($_POST['nome']);
     $data_nascimento = $_POST['data_nascimento'];
     $telefone = trim($_POST['telefone']);
-    $endereco = trim($_POST['endereco']);
+    
     $sexo = $_POST['sexo'];
 
     // Valida os dados
@@ -44,24 +44,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $erro = "A data de nascimento não pode ser uma data futura.";
     } else {
         // Prepara a consulta SQL para atualizar os dados
-        $sql = "UPDATE alunos SET nome = :nome, data_nascimento = :data_nascimento, telefone = :telefone, endereco = :endereco, sexo = :sexo WHERE id = :id";
+        $sql = "UPDATE alunos SET nome = :nome, data_nascimento = :data_nascimento, telefone = :telefone, sexo = :sexo WHERE id = :id";
         $stmt = $pdo->prepare($sql);
 
         // Vincula os parâmetros
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':data_nascimento', $data_nascimento);
         $stmt->bindParam(':telefone', $telefone);
-        // $stmt->bindParam(':endereco', $endereco);
+        
         $stmt->bindParam(':sexo', $sexo);
         $stmt->bindParam(':id', $id);
 
         // Executa a consulta
         if ($stmt->execute()) {
-            // Se a atualização for bem-sucedida, redireciona de volta para a página de listagem
-            header('Location: listar_alunos.php');
-            exit;
+            $sucesso = "Alteração realizada com sucesso!";
         } else {
-            $erro = "Erro ao atualizar o cadastro do aluno: " . implode(", ", $stmt->errorInfo());
+            $erro = "Erro ao editar o aluno.";
         }
     }
 }
@@ -95,10 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="telefone" class="form-label">Telefone</label>
             <input type="tel" class="form-control" id="telefone" name="telefone" value="<?php echo htmlspecialchars($aluno['telefone']); ?>" required>
         </div>
-        <div class="mb-3">
-            <label for="endereco" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="endereco" name="endereco" value="<?php echo htmlspecialchars($aluno['endereco']); ?>" required>
-        </div>
+        
         <div class="mb-3">
             <label for="sexo" class="form-label">Sexo</label>
             <select class="form-select" id="sexo" name="sexo" required>
