@@ -121,5 +121,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <a href="index2.php" class="btn btn-primary btn-lg m-2">Voltar ao menu</a>
 </div>
 
+</div>
+    <div class="text-center mt-3">
+        <a href="listar_aulas.php" class="btn btn-primary btn-lg m-2">Voltar para Lista de Aulas</a>
+    </div>
+
 </body>
 </html>

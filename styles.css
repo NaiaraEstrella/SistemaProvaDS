@@ -1,13 +1,13 @@
 /* Estilo para o menu */
 .menu {
-    background-color: #f8f9fa; /* Cor de fundo do menu */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: 0 4px 8px rgba(11, 116, 46, 0.2); /* Sombra para dar profundidade */
-    margin-top: 20px; /* Espaçamento acima do menu */
-    max-width: 400px; /* Tamanho máximo da largura do menu */
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #f8f9fa; /* Cor de fundo do menu, um tom claro de cinza */
+    border-radius: 10px; /* Bordas arredondadas para o menu */
+    padding: 20px; /* Espaçamento interno para criar espaço entre o conteúdo e a borda do menu */
+    box-shadow: 0 4px 8px rgba(11, 116, 46, 0.2); /* Sombra para dar profundidade ao menu, cor verde com transparência */
+    margin-top: 20px; /* Espaçamento acima do menu para separar do conteúdo superior */
+    max-width: 400px; /* Largura máxima do menu */
+    margin-left: auto; /* Centraliza o menu na tela */
+    margin-right: auto; /* Centraliza o menu na tela */
 }
 
 /* Estilo do título do menu */
@@ -19,39 +19,52 @@
 .menu .btn {
     width: 100%; /* Faz com que os botões ocupem toda a largura do menu */
     margin: 5px 0; /* Espaçamento entre os botões */
+    background-color: #28a745; /* Cor de fundo dos botões agora é verde (usando o código de cor para o verde) */
+    border: none; /* Remove a borda padrão dos botões */
+    color: white; /* Cor do texto dos botões, agora é branco */
+    padding: 10px; /* Espaçamento interno dos botões */
+    font-size: 1rem; /* Tamanho da fonte do texto dentro dos botões */
+    border-radius: 5px; /* Bordas arredondadas nos botões */
+    transition: background-color 0.3s ease; /* Transição suave na mudança de cor de fundo */
+}
+
+/* Modificando o comportamento dos botões ao passar o mouse */
+.menu .btn:hover {
+    background-color: #218838; /* Quando o mouse passa por cima, a cor de fundo do botão muda para um verde mais escuro */
 }
 
 /* Centralizando o conteúdo principal */
 .main-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 800px; /* Largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    text-align: center; /* Centraliza o texto dentro do conteúdo */
 }
 
 /* Estilo para a imagem da academia */
 .logo-img {
-    width: 100%;
-    height: auto;
-    max-width: 300px; /* Tamanho máximo da imagem */
-    margin-top: 20px;
+    width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 300px; /* Tamanho máximo da largura da imagem */
+    margin-top: 20px; /* Espaço acima da imagem */
 }
 
 /* Estilo do nome da academia */
 #academia-name {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 20px;
+    font-size: 2.5rem; /* Tamanho grande para o nome da academia */
+    font-weight: bold; /* Deixa o nome da academia em negrito */
+    margin-top: 20px; /* Espaço acima do nome da academia */
 }
 
 /* Estilo da frase motivadora */
 #motivational-quote {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-top: 10px;
+    font-size: 1.2rem; /* Tamanho da fonte da frase motivadora */
+    font-style: italic; /* Deixa a frase motivadora em itálico */
+    margin-top: 10px; /* Espaço acima da frase motivadora */
 }
 
 /* Estilo para os botões de ação */
 .btn {
-    width: 100%;
-    margin: 10px 0;
+    width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
+    margin: 10px 0; /* Espaçamento entre os botões */
 }
+

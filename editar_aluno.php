@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':data_nascimento', $data_nascimento);
         $stmt->bindParam(':telefone', $telefone);
-        $stmt->bindParam(':endereco', $endereco);
+        // $stmt->bindParam(':endereco', $endereco);
         $stmt->bindParam(':sexo', $sexo);
         $stmt->bindParam(':id', $id);
 

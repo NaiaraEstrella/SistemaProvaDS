@@ -32,7 +32,7 @@ $alunos = $stmt->fetchAll();
                     <td><?php echo htmlspecialchars($aluno['nome']); ?></td>
                     <td>
                         <!-- Link para editar o aluno com o id como parâmetro na URL -->
-                        <a href="editar.php?id=<?php echo $aluno['id']; ?>" class="btn btn-primary">Editar</a>
+                        <a href="editar_aluno.php?id=<?php echo $aluno['id']; ?>" class="btn btn-primary">Editar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

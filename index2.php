@@ -8,9 +8,7 @@ require 'config.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial - Sistema de Gestão</title>
-    <!-- Link para o arquivo CSS externo -->
-    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de que o caminho para o CSS está correto -->
-    <!-- Link do Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -31,13 +29,7 @@ require 'config.php';
         <!-- Comentário: Substitua "caminho/para/sua/foto.jpg" pelo caminho correto da foto da academia -->
     </div>
 
-    <!-- Botões de Ação -->
-    <div class="text-center mt-4">
-        <a href="cadastro.php" class="btn btn-primary btn-lg m-2">Efetuar Cadastro</a>
-        <a href="editar.php" class="btn btn-warning btn-lg m-2">Editar Cadastro</a>
-        <a href="marcar.php" class="btn btn-success btn-lg m-2">Marcar Consulta</a>
-        <a href="visualizar_consultas.php" class="btn btn-primary btn-lg m-2">Consultas Agendadas</a>
-    </div>
+        
 </div>
 
 <!-- Menu -->

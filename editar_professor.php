@@ -111,7 +111,10 @@ if (empty($nome)) {
     </form>
 </div>
 
-
+</div>
+    <div class="text-center mt-3">
+        <a href="listar_professor.php" class="btn btn-primary btn-lg m-2">Voltar para Lista de Professores</a>
+    </div>
 
 </body>
 </html>
