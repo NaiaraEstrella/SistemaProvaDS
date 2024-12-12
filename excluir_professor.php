@@ -38,7 +38,7 @@ $erro = ''; // Mensagem de erro
 <div class="container mt-5">
 <h2>Excluir Professor(es)</h2>
 
-```
+
     <?php if (isset($erro) && $erro): ?>
         <div class="alert alert-danger"><?php echo $erro; ?></div>
     <?php endif; ?>
@@ -84,7 +84,7 @@ $erro = ''; // Mensagem de erro
     </script>
 </div>
 
-```
+
 
 </body>
 </html>

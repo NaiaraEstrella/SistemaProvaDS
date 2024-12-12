@@ -13,11 +13,11 @@ if (isset($_GET['id'])) {
     $aluno = $stmt->fetch();
 
     if (!$aluno) {
-        header('Location: exibir_alunos.php');
+        header('Location: exibir.php');
         exit;
     }
 } else {
-    header('Location: exibir_alunos.php');
+    header('Location: exibir.php');
     exit;
 }
 

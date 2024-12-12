@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
     <div class="text-center mt-3">
-        <a href="index.php" class="btn btn-primary btn-lg m-2">Voltar ao menu</a>
+        <a href="index1.php" class="btn btn-primary btn-lg m-2">Voltar ao menu</a>
     </div>
 </body>
 </html>

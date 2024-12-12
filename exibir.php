@@ -31,7 +31,7 @@ $aulas = $stmt_aulas->fetchAll(PDO::FETCH_ASSOC);
 <div class="container mt-5">
 <h2>Lista de Alunos, Professores e Aulas</h2>
 
-```
+
     <!-- Lista de Alunos -->
     <div class="mb-3">
         <h4>Alunos</h4>
@@ -174,7 +174,7 @@ $aulas = $stmt_aulas->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-```
+
 
 </body>
 </html>
